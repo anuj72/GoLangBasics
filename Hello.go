@@ -17,18 +17,14 @@ func main() {
 		fmt.Println(i)
 	}
 
-	 myadd,mysub := add(100,2)
-	 fmt.Println(myadd)
+	myadd, mysub := add(100, 2)
+	fmt.Println(myadd)
 	fmt.Println(mysub)
-
-
-
-
 
 }
 
-func add(num1 , num2 int) (out1, out2 int) {
-         out1 =num1+num2
-	     out2 =num1-num2
-        return
+func add(num1, num2 int) (out1, out2 int) {
+	out1 = num1 + num2
+	out2 = num1 - num2
+	return
 }

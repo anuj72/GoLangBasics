@@ -1,25 +1,45 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+type geometry interface {
+	area() float32
+	peri() float32
+}
 
 func main() {
+	mycir := circle{20}
+	myrect := rect{20, 20}
 
-	var t BookT
-	t = BookT{"10", "14", 11}
-	fmt.Println("Area of tank :", t.Tarea())
+	fmt.Println(mycir.area())
+	fmt.Println(myrect.area())
 
-}
-func (m BookT) Tarea() float64 {
-
-	return float64(2 * m.page)
+	mesure(mycir)
 }
 
-type book interface {
-	sportsName() string
+func mesure(g geometry) {
+	fmt.Println(g.area())
+	fmt.Println(g.peri())
 }
 
-type BookT struct {
-	name   string
-	author string
-	page   int
+func (c circle) area() float32 {
+	return math.Pi * c.redius * c.redius
+}
+func (c rect) area() float32 {
+	return c.length * c.width
+}
+func (c circle) peri() float32 {
+	return math.Pi * c.redius * 2
+}
+
+type rect struct {
+	width  float32
+	length float32
+}
+
+type circle struct {
+	redius float32
 }
