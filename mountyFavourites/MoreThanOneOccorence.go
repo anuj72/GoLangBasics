@@ -10,7 +10,6 @@ func main() {
 	var farr = []string{}
 	for _, element := range arr {
 		var split = strings.Split(element, "")
-		//fmt.Println(split)
 		index := 0
 		for _, element := range split {
 			if element == "a" {
