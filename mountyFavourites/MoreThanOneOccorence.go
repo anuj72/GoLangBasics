@@ -1,19 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	var arr = []string{"anand", "anuj", "abhinandan", "akhil", "aman"}
-
+	var farr = []string{}
 	for _, element := range arr {
-		fmt.Println(element)
-		for i := 0; i < len(element)-1; i++ {
-			fmt.Println(element[i])
+		var split = strings.Split(element, "")
+		//fmt.Println(split)
+		index := 0
+		for _, element := range split {
+			if element == "a" {
+				index++
+			}
 		}
-		/*if element!="anand" {
-			farr=append(farr,element)
-		}*/
+		if index > 1 {
+			farr = append(farr, element)
+		}
 	}
-	//fmt.Println(farr)
+	fmt.Println(farr)
 
 }

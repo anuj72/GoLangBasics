@@ -13,10 +13,8 @@ type geometry interface {
 func main() {
 	mycir := circle{20}
 	myrect := rect{20, 20}
-
 	fmt.Println(mycir.area())
 	fmt.Println(myrect.area())
-
 	mesure(mycir)
 }
 
