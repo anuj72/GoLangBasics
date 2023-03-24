@@ -22,4 +22,8 @@ func main() {
 	fmt.Println("\n")
 	fmt.Printf("input type : %T", input)
 
+	fmt.Println("hello world11")
+
+	fmt.Println("////")
+
 }
