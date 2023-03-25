@@ -1,0 +1,16 @@
+version: "2"
+services:
+  postgres:
+    image: eeacms/postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DBNAME: postgres
+      POSTGRES_DBUSER: postgres
+      POSTGRES_DBPASS: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+volumes:
+  postgres-data:
