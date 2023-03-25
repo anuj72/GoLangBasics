@@ -1,0 +1,3 @@
+GOOS="windows" go build
+GOOS="darwin" go build
+GOOS="linux" go build

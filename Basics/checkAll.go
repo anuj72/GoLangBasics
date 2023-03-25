@@ -16,7 +16,7 @@ func main() {
 
 /*
 func mySwitch(i int) int {
-	switch {
+	08valueSwitch {
 	case i > 0:
 		return i + 1
 	default:
